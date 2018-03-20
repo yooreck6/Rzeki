@@ -6,8 +6,11 @@
 package rzeki;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Random;
 
 /**
  *
@@ -38,6 +41,31 @@ public class Rzeki {
         map.put(baltyk, list1);
         map.put(czarne, list2);
         
+        Collection<Morze> morza = map.keySet();
+        Random r = new Random();
+        int i = r.nextInt(morza.size());
+        Iterator<Morze> iterator = morza.iterator();
+        Morze morze = null; 
+        int licznik = 0;
+        while(iterator.hasNext())
+        {
+            morze = iterator.next();
+            System.out.println(i+ " "+licznik+" " +morze);
+            if(licznik==i) break; 
+            licznik++;
+        }
+        
+        List<Rzeka> rzeki = map.get(morze);
+        System.out.println(morze);
+        
+        Rzeka najdluzsza = rzeki.get(0);
+        for(Rzeka rz : rzeki)
+        {
+            if(rz.getDlugosc()>najdluzsza.getDlugosc())
+            {
+                najdluzsza = rz;
+            }
+        }
     }
     
 }

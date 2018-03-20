@@ -22,12 +22,17 @@ public class Rzeka {
     
     @Override
     public String toString() {
-        return "Rzeka(" + "nazwa=" + nazwa + ",";
+        return "Rzeka(" + "nazwa=" + nazwa + "dlugosc=" + dlugosc;
     }
     
     public boolean equals(Rzeka r)
     {
         return nazwa.equals(r.nazwa);
+    }
+    
+    public int getDlugosc() 
+    {
+        return dlugosc;
     }
     
 }

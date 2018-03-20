@@ -22,13 +22,15 @@ public class Morze {
     
     @Override 
     public String toString() {
-        return "Morze(" + "nazwa=" + nazwa +",";
+        return "Morze(" + "nazwa= " + nazwa +" powierzchnia= " + powierzchnia;
     }
     
     public boolean equals(Morze m)
     {
         return nazwa.equals(m.nazwa);
     }    
+    
+    
             
     
 }
